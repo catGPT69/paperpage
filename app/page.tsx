@@ -346,8 +346,8 @@ const PaperCollection = () => {
           <div className="text-center space-y-12">
             <h1 className="text-7xl md:text-8xl font-bold tracking-tight text-slate-900">論文集</h1>
             <div className="space-y-4 text-lg md:text-xl text-slate-600">
-              <p>氏名（姓名）：シン ミカ</p>
-              <p>提出日（西暦）：2025年11月</p>
+              <p>シン ミカ</p>
+              <p>2025年11月</p>
             </div>
             <button
               onClick={() => scrollToSection("toc")}
@@ -362,8 +362,13 @@ const PaperCollection = () => {
       {/* 目录 */}
       {currentSection === "toc" && (
         <div className="max-w-4xl mx-auto px-4 py-20 md:py-32">
-          <h2 className="text-4xl md:text-5xl font-bold mb-12 text-slate-900">目録</h2>
-          <div className="space-y-6 mb-12">
+          <h2 className="text-4xl md:text-5xl font-bold mb-6 text-slate-900">目録</h2>
+          <div className="mb-12 text-foreground">
+            <p className="text-lg leading-relaxed mb-4">
+              本論文集は、イラストレーション、アートマーケット、絵画、絵本創作、展覧会分析という多様な芸術実践に基づき、アートマネジメントとキュレーションの総合的な機能と役割を探求することを目的とする。特に、観客体験の最適化や、芸術と社会・教育の結びつきに焦点を当てた実践的考察が展開されている。
+            </p>
+          </div>
+          <div className="space-y-6">
             {papers.map((paper, idx) => (
               <button
                 key={paper.id}
@@ -379,20 +384,6 @@ const PaperCollection = () => {
                 </div>
               </button>
             ))}
-          </div>
-          <div className="mt-12 pt-8 border-t border-slate-200">
-            <h3 className="text-3xl font-bold mb-6 text-slate-900">概要</h3>
-            <div className="space-y-6 text-foreground">
-              <p className="text-lg leading-relaxed">
-                本論文集は、イラストレーション、アートマーケット、絵画、絵本という多様な芸術実践に基づき、アートマネジメントとキュレーション戦略の総合的な機能と役割を探求することを目的とする。
-              </p>
-              <p className="text-lg leading-relaxed">
-                特に、観体験の最適化や、芸術と社会・教育の結びつきに焦点を当てた実践的考察が展開されている。各論文は、展示デザイン、プロジェクト管理、デジタル表現、そして教育的価値という複数の視点から、現代社会における芸術の役割と可能性を検討している。
-              </p>
-              <p className="text-lg leading-relaxed">
-                本研究の成果は、観客の多様なニーズに応じたキュレーション実践、ならびに芸術・教育・社会の結びつきに基づく新たな実践的展開へと生かされることが期待される。
-              </p>
-            </div>
           </div>
         </div>
       )}
@@ -411,8 +402,8 @@ const PaperCollection = () => {
                   <h2 className="text-4xl md:text-5xl font-bold mb-4 text-slate-900">{paper.title}</h2>
                   <p className="text-xl text-slate-600 mb-6">{paper.subtitle}</p>
                   <div className="flex flex-col md:flex-row gap-4 text-slate-600 mb-6">
-                    <span>著者：{paper.author}</span>
-                    <span>日付：{paper.date}</span>
+                    <span>{paper.author}</span>
+                    <span>{paper.date}</span>
                   </div>
                   {paper.details && (
                     <div className="mt-6 p-4 bg-slate-50 rounded-lg space-y-2 text-sm text-slate-700">

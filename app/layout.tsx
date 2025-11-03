@@ -7,9 +7,9 @@ const _geist = Geist({ subsets: ["latin"] });
 const _geistMono = Geist_Mono({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: 'v0 App',
-  description: 'Created with v0',
-  generator: 'v0.app',
+  title: 'シンミカ　論文集',
+  description: 'シンミカ　大学院提出用 作品・論文集',
+  generator: 'シンミカ',
 }
 
 export default function RootLayout({
